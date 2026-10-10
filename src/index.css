@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    background-color: #F5F7FA;
+    color: #172033;
+  }
+}
+
+@layer components {
+  .input {
+    @apply w-full px-3 py-2 text-sm border border-slate-200 rounded-md bg-white text-slate-800
+      focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent
+      placeholder:text-slate-400 transition-all;
+  }
+
+  .input-sm {
+    @apply w-full px-2 py-1 text-xs border border-slate-200 rounded bg-white text-slate-800
+      focus:outline-none focus:ring-1 focus:ring-brand-400 focus:border-transparent
+      placeholder:text-slate-400 transition-all;
+  }
+
+  .card {
+    @apply bg-white rounded-xl border border-slate-200 shadow-sm;
+  }
+
+  .btn-primary {
+    @apply flex items-center justify-center gap-1.5 px-3 py-2 text-sm font-medium text-white rounded-md
+      bg-navy hover:bg-brand-700 transition-colors disabled:opacity-40;
+  }
+
+  .btn-secondary {
+    @apply flex items-center justify-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-700
+      bg-slate-100 rounded-md hover:bg-slate-200 disabled:opacity-40 transition-colors;
+  }
+}
+
+/* Hide scrollbar for nav */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Smooth slider thumb */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #2563EB;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #2563EB;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
